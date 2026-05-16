@@ -7,4 +7,12 @@
 
 <h1>Create</h1>
 
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    title: <input type="text" name="title">
+    year: <input type="text" name="year">
+    summary: <input type="text" name="summary">
+    <button type="submit">create</button>
+</form>
+
 {% endblock content %} 
