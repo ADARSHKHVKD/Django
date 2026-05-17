@@ -9,16 +9,12 @@
 
 
 <h1>title :{{movie_obj.title | upper}}</h1>
-<!-- <img src="{% static 'images/' %}{{movie_obj.img}}"> -->
+
 
 <p>summary :{{movie_obj.description | default:'default content'}}</p>
 <h4>year :{{movie_obj.year}}</h4>
 
-<!-- {% if  movie_obj.success%}
 
-<p>movie was succesfull</p>
-  
-{% endif %} -->
 {% endfor%}
 
 {% endblock %} 
