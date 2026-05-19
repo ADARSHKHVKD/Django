@@ -1,14 +1,16 @@
 from django.shortcuts import render
 from . models import MovieInfo
+from . forms import MovieForm
 # Create your views here.
 def create(request):
+    frm =MovieForm ()
     if request.POST:
         title=(request.POST.get('title'))
         year=(request.POST.get('year'))
-        description=(request.POST.get('summary'))
+        description=(request.POST.get('description'))
         movie_obj=MovieInfo(title=title,year=year,description=description)
         movie_obj.save()
-    return render(request,'create.html')
+    return render(request,'create.html',{'frm':frm})
 # movie_details={
 #         'movies':[
 #         {
